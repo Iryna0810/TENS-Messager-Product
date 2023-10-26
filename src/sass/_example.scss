@@ -8,21 +8,45 @@
   padding: 16px;
 }
 
-.example code {
-  font-family: monospace;
-  font-size: 16px;
-  font-weight: 700;
-  background-color: #ff6b0a;
-  color: #fff;
-  padding: 2px 6px;
-  border-radius: 2px;
+// .example code {
+//   font-family: monospace;
+//   font-size: 16px;
+//   font-weight: 700;
+//   background-color: #ff6b0a;
+//   color: #fff;
+//   padding: 2px 6px;
+//   border-radius: 2px;
+// }
+
+// .example .background {
+//   height: 240px;
+//   // ❗️❗️❗️ The path to images from a SASS file
+//   // is always the same as from the css folder.
+//   background-image: url('../images/logo.png');
+//   background-size: cover;
+//   background-position: center;
+// }
+
+.section {
+  display: block;
+  margin: 0 auto;
+  padding: 10px;
+}
+.container {
+  display: flex;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+@media screen and (min-width: 320px) {
+   width: 320px;
+   padding: 20px;
+  }
 }
 
-.example .background {
-  height: 240px;
-  // ❗️❗️❗️ The path to images from a SASS file
-  // is always the same as from the css folder.
-  background-image: url('../images/logo.png');
-  background-size: cover;
-  background-position: center;
+.paragraph {
+  font-size: 20px;
+  padding: 5px;
+  display: block;
 }
+
