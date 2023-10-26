@@ -7,7 +7,6 @@ export default function handlerLoadWindowFAQ() {
             const li = `<li class='post'>
             <p>Q${post.id}: ${post.question}</p>
             <p>A${post.id}: ${post.answear}</p>
-            <div class="line-solid"></div>
             </li>
         `;
             return li;

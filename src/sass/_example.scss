@@ -176,3 +176,7 @@ body {
 .post {
   list-style-type: none;
 }
+
+.post:not(:last-child){
+  border-bottom: #2f2f37 1px solid
+}
