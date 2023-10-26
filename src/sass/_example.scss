@@ -1,36 +1,77 @@
-.example {
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
     Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   line-height: 1.5;
   background-color: #fff;
   color: #2f2f37;
-  max-width: 960px;
+  max-width: auto;
   padding: 16px;
 }
 
-// .example code {
-//   font-family: monospace;
-//   font-size: 16px;
-//   font-weight: 700;
-//   background-color: #ff6b0a;
-//   color: #fff;
-//   padding: 2px 6px;
-//   border-radius: 2px;
-// }
+.button {
+  display: flex;
+  text-decoration: none;
+  margin-top: 20px;
+  position: sticky;
+  bottom: 20px;
+  background: black;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
 
-// .example .background {
-//   height: 240px;
-//   // ❗️❗️❗️ The path to images from a SASS file
-//   // is always the same as from the css folder.
-//   background-image: url('../images/logo.png');
-//   background-size: cover;
-//   background-position: center;
-// }
+.descktop-version {
+  display: none;
+      @media screen and (min-width: 788px) {
+          display: block;
+          width: 80%;
+          height: auto;
+        }
+}
+.mobile-version {
+  display: flex;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+  padding: 10px;
+  @media screen and (min-width: 788px) {
+      display: none;
+    }
+}
+
+.mobile-version img {
+  width: 90vw;
+  height: auto;
+}
 
 .section {
   display: block;
   margin: 0 auto;
   padding: 10px;
+    @media screen and (min-width: 788px) {
+        display: flex;
+        justify-content: space-around;
+        width: 80vw;
+      }
+}
+
+.section-unlock {
+    display: block;
+      margin: 0 auto;
+      padding: 10px;
+      height: auto;
+      // overflow: hidden;
 }
 .container {
   display: flex;
@@ -38,10 +79,63 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-@media screen and (min-width: 320px) {
-   width: 320px;
-   padding: 20px;
+  height: 100vh;
+  width: 100vw;
+  padding: 10px;
+  @media screen and (min-width: 320px) {
+   min-width: 320px;
   }
+  @media screen and (min-width: 788px) {
+    width: calc(100vw/2);
+  }
+}
+
+.container-unlock {
+  height: auto;
+  display: block;
+  // flex-direction: column;
+  // gap: 5px;
+
+}
+
+.list {
+  height: auto;
+}
+
+.photo-lg-screen{
+  display: none;
+  @media screen and (min-width: 788px) {
+      display: block;
+      width: calc(100vw/2);
+      height: 80vh;
+      padding: 10px;
+    }
+}
+.image {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-unlock {
+      width: 80vw;
+      height: 100%;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 10px;  
+}
+
+.photo-lg-screen img {
+  display: flex;
+  max-width: 100%
+}
+
+.photo{
+  display: block;
+    @media screen and (min-width: 788px) {
+        display: none;
+      }
 }
 
 .paragraph {
@@ -50,3 +144,35 @@
   display: block;
 }
 
+.c-icon {
+  --star-active: #fece3c;
+  --star-inactive: #6c6962;
+  fill: var(--star-inactive);
+
+}
+
+.c-icon.active {
+  fill: var(--star-active);
+}
+
+.line{
+  border-bottom: #2f2f37 dashed 1px;
+}
+.text-price{
+  text-decoration: line-through;
+}
+.photo-messager {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.line-solid {
+  background-color: gray;
+    height: 1px;
+    width: 90vw;
+}
+
+.post {
+  list-style-type: none;
+}
