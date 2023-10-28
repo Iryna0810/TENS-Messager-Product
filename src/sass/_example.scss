@@ -180,3 +180,11 @@ body {
 .post:not(:last-child){
   border-bottom: #2f2f37 1px solid
 }
+.item::before {
+  content: "";
+  width: 24px;
+  height: 24px;
+  background-size: contain;
+  background-image: url("../images/icons8-checkmark.png");
+}
+

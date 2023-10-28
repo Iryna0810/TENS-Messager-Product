@@ -4,7 +4,7 @@ const cardContainer = document.querySelector('.faq');
 export default function handlerLoadWindowFAQ() {
     const createdSection = () => {
          const section = data.map((post) => {
-            const li = `<li class='post'>
+             const li = `<li key='${post.id}' class='post'>
             <p>Q${post.id}: ${post.question}</p>
             <p>A${post.id}: ${post.answear}</p>
             </li>
